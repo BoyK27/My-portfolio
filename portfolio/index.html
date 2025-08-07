@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>My Portfolio</title>
+    <link rel="icon" href="images/logo2.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" id="index-link">Home</a></li>
+          <li><a href="#about" id="about-link">About</a></li>
+          <li><a href="#works" id="myworks-link">My Works</a></li>
+          <li><a href="#contact" id="contact-link">Contact</a></li>
+        </ul>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          &#9776;
+        </button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <h1>Adaptive web apps for your brand</h1>
+        <button class="explore-btn">Explore More</button>
+      </section>
+
+      <!-- Introduction -->
+      <section class="intro">
+        <div class="intro-text">
+          <h2>Hello, I'm Dr. Kernyuy Patrick</h2>
+          <p>
+            A passionate full-stack developer building responsive web
+            applications.
+          </p>
+          <article>
+            Hey there! I’m Kernyuy Patrick, born in 2005, currently studying at
+            Yaoundé International Business School, and working my way up as a
+            front-end developer. I enjoy creating clean, responsive websites
+            that not only look great but also feel smooth to use. I’m all about
+            turning ideas into real, usable web experiences — one line of code
+            at a time.
+          </article>
+        </div>
+        <div class="intro-image">
+          <img src="images/one.webp" alt="Profile" />
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects" id="works">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <img src="projects/q.png" alt="Project 1" />
+            <h4>Client: Maria Anna</h4>
+            <p>A Stem Evaluation Portal for inter school connectivity</p>
+          </div>
+          <div class="project">
+            <img src="projects/i.png" alt="Project 2" />
+            <h4>Client: Fongwa Calvin</h4>
+            <p>An E-commerce front-end site for CNL</p>
+          </div>
+          <div class="project">
+            <img src="projects/y.png" alt="Project 3" />
+            <h4>Client: Ndum Rene</h4>
+            <p>A registration Link for easy a portal voting system</p>
+          </div>
+          <div class="project">
+            <img src="projects/p.png" alt="Project 4" />
+            <h4>Client: Siingnkah</h4>
+            <p>
+              A task tracker to integrate in a more larger system with react
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <h2>Following are some heart Touching Testimonials</h2>
+        <div class="testimonial">
+          <p>
+            "Kernyuy is a skilled dev growing with the right passion and honesty
+            a worker needs, reliable, and detail-oriented."
+          </p>
+          <strong>- Maria Anna</strong>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Professional work with amazing results for the first time working
+            with him. I kinda admit I was afraid at the begining giving him the
+            project"
+          </p>
+          <strong>- Calvin Fongwa, Acacia Yaoundé</strong>
+        </div>
+      </section>
+    </main>
+
+    <div id="about"></div>
+
+    <!--Projects-->
+
+    <div id="my-projects">
+      <section class="project-hero">
+        <h1>My Work</h1>
+        <p>Projects I've worked on so far</p>
+      </section>
+
+      <section class="work-container" id="workContainer"></section>
+
+      <button id="loadMoreBtn">Load More</button>
+    </div>
+    <div id="contact"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <h3>MyPortfolio</h3>
+          <p>(237) 651-592-430<br />KERNYUY Patrick<br />Acacia Yaoundé</p>
+        </div>
+        <div class="footer-section signup-section">
+          <h3>Personal Branding Portfolio</h3>
+          <p>Making touching innovations in every step I take.</p>
+        </div>
+        <div class="footer-section contact-section">
+          <p>
+            Yaounde International Business School/ MountainHub Africa<br />Carrefour
+            Obili<br />(237) 651-592-430
+          </p>
+          <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">WhatsApp</a> |
+            <a href="#">Instagram</a> | <a href="#">Twitter</a> |
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; 2025, MountainHub/KernyuPatrick. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Navigation Toggle Script -->
+    <script>
+      const toggleBtn = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        toggleBtn.classList.toggle("open");
+      });
+    </script>
+    <script src="renderingDOM.js"></script>
+
+    <script>
+      const projects = [
+        {
+          title: "Music Player for mp3 formats",
+          image: "projects/e.png",
+          link: "#",
+        },
+        {
+          title: "E-commerce Platform for CNL Cameroon",
+          image: "projects/i.png",
+          link: "#",
+        },
+        {
+          title: "Binary to decimal converter at FreeCodeCamp",
+          image: "projects/o.png",
+          link: "#",
+        },
+        {
+          title: "Task Tracker fron-end Application",
+          image: "projects/p.png",
+          link: "#",
+        },
+        {
+          title: "Prince George Community Colledge sub portal",
+          image: "projects/q.png",
+          link: "#",
+        },
+        {
+          title: "A voting system registration portal",
+          image: "projects/y.png",
+          link: "#",
+        },
+        {
+          title: "A platformer gamer at freeCodeCamp",
+          image: "projects/r.png",
+          link: "#",
+        },
+        { title: "Calorie Dispenser App", image: "projects/w.png", link: "#" },
+        {
+          title: "F-Frank-Foot template players states",
+          image: "projects/t.png",
+          link: "#",
+        },
+      ];
+
+      let currentIndex = 0;
+      const increment = 3;
+      const container = document.getElementById("workContainer");
+      const loadBtn = document.getElementById("loadMoreBtn");
+
+      function renderProjects() {
+        const nextItems = projects.slice(
+          currentIndex,
+          currentIndex + increment
+        );
+        let html = "";
+
+        nextItems.forEach((project) => {
+          html += `
+        <a href="${project.link}">
+          <img src="${project.image}" alt="${project.title}" />
+          <h3>${project.title}</h3>
+        </a>
+      `;
+        });
+
+        container.innerHTML += html;
+        currentIndex += increment;
+
+        if (currentIndex >= projects.length) {
+          loadBtn.style.display = "none";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProjects();
+      });
+
+      loadBtn.addEventListener("click", () => {
+        renderProjects();
+      });
+    </script>
+  </body>
+</html>
